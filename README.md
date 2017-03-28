@@ -38,9 +38,9 @@ Reduce input records 	0 	14 	14 (Map,Reduce,Total)
 # Patrons Structurels 
 On se propose de réaliser une application mettant en oeuvre le patron de conception structurel.
 Pour cela, nous allons réaliser la jointure de deux ensembles de données: les fichiers délimités forum_nodes dont les champs sont de la forme suivante :<br/>
- node_id	 title	tagnames	author_id	 body	node_type	parent_id	abs_parent_id	added_at	score	state_string	last_edited_id	last_activity_by_id last_activity_at	active_revision_id	extra, extra_ref_id	extra_count
+ node_id	 title	tagnames  author_id	 body	 node_type	 parent_id	 abs_parent_id	 added_at	 score	state_string	 last_edited_id	last_activity_by_id  last_activity_at	 active_revision_id	 extra  extra_ref_id	 extra_count
  et forum_users dont les champs sont de la forme suivante :<br/>
-user_ptr_id	reputation	gold	silver	bronze<br/>
+user_ptr_id 	reputation	 gold 	silver 	bronze<br/>
 Ils ont une clef en commun :author_id dans le fichier forum_nodes et user_ptr_id dans forum_users
 On crée un job MapReduce permettant de donner, pour chaque post, les données suivantes:
 "id" "title" "tagnames" "author_id" "node_type" "parent_id" "abs_parent_id" "added_at" "score" "reputation" "gold" "silver" "bronze"<br/>
