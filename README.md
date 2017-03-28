@@ -1,9 +1,8 @@
 # Big-Data-MapReduce-Design-Patterns
-Le but de ce Tp est de mettre en oeuvre les Patrons de Conception Map Reduce
+Le but de ce Tp est de mettre en oeuvre les Patrons de Conception MapReduce
 Nous utilisons le langage Python pour développer les Mappers et les Reducers.
 # Patrons de Filtrage : Filtrage Simple
 On se propose de réaliser un programme MapReduce mettant en oeuvre le patron de Filtrage.
-Pour cet exemple on s'intéresse au fichier forum_node 
 Comme exemple pour ce patron de conception nous allons compter le nombre de posts avec une seule phrase ou moins pour ceci on developpe :
 - Un Mapper permettant d’extraire uniquement les posts d’une phrase ou moins 
 - Un Reducer permettant de calculer le nombre de posts d'une phrase ou moins
@@ -17,7 +16,7 @@ Index ,Récapitulation
 On vise à créer dans cette partie un index pour nos données, c’est à dire un fichier permettant d’afficher pour chaque mot, dans quels posts du forum est-ce qu’il a été mentionné, et combien de fois.
 On utilise pour ceci :
 - Un Mapper permettant d’extraire les différents mots d’un post le resultat sera sous la forme (word,node_id)
--Un Reducer permettant de donner, pour chacun des mots, le nombre d’occurrences, ainsi que la liste des node_id dans lesquels il apparaît
+- Un Reducer permettant de donner, pour chacun des mots, le nombre d’occurrences, ainsi que la liste des node_id dans lesquels il apparaît
 ## Moyenne
 On s’intéresse dans cette partie à calculer la moyenne des ventes chaque jour de la semaine .On utilise pour ceci :
 - Un Mapper permettant d’extraire le cout de vente pour chaque jour de la semaine le resultat sera sous la forme (day,cost)
@@ -46,9 +45,8 @@ Ils ont une clef en commun :author_id dans le fichier forum_nodes et user_ptr_id
 On crée un job MapReduce permettant de donner, pour chaque post, les données suivantes:
 "id" "title" "tagnames" "author_id" "node_type" "parent_id" "abs_parent_id" "added_at" "score" "reputation" "gold" "silver" "bronze"
 On utilise : 
--Un Mapper permettant de parcourir les fichiers forum_users et forum_nodes et d'extraire de chacune des entrées les données nécessaires en utilisant comme 
-clef author_id
--Un Reducer permettant de faire l’opération de jointure entre les deux fichiers
+- Un Mapper permettant de parcourir les fichiers forum_users et forum_nodes et d'extraire de chacune des entrées les données nécessaires en utilisant comme clef author_id
+- Un Reducer permettant de faire l’opération de jointure entre les deux fichiers
 
 ==> la réputation de l’auteur du post dont l’identifiant est 100002517 est 6149
 
