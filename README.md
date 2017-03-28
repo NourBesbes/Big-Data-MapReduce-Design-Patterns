@@ -36,7 +36,7 @@ Reduce input records 	0 	14 	14 (Map,Reduce,Total)
 6  	150296795.47
 ==>On conclue que l'utilisation du combiner permet de diminuer le travail du Reducer ainsi que le traffic réseau 
 
-# Patron de conception structurel
+# Patrons Structurels 
 On se propose de réaliser une application mettant en oeuvre le patron de conception structurel.
 Pour cela, nous allons réaliser la jointure de deux ensembles de données: les fichiers délimités forum_nodes dont les champs sont de la forme suivante
 node_id	 title	tagnames	author_id	 body	node_type	parent_id	abs_parent_id	added_at	score	state_string	last_edited_id	last_activity_by_id last_activity_at	active_revision_id	extra, extra_ref_id	extra_count
